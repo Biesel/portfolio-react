@@ -16,7 +16,7 @@ const openTab = (props) => {
 export function ContactContainer() {
   return (
       <>
-    <Contact>
+    <Contact id="contact">
       <Contact.InnerContainer>
         <Contact.Form>
           <Contact.Text>Deja un Mensaje</Contact.Text>

@@ -1,15 +1,13 @@
 import React from 'react';
 import {Skills as Sk} from '../components';
-// import icon_nodejs from '../assets/graphs/skill_icons_nodejs.png';
-// import icon_php from '../assets/graphs/skill_icons_php.png';
-// import icon_rails from '../assets/graphs/skill_icons_rurails.png';
+
 import icon from '../assets/graphs/skill_icon_example.png';
 import graph_pieChart from '../assets/graphs/pie_chart_example.png';
 
 export function SkillsContainer(){
  return(
    <>
-   <Sk>
+   <Sk id="skills">
 
      <Sk.Title> Habilidades</Sk.Title>
 

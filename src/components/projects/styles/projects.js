@@ -39,7 +39,7 @@ export const Portfolio= styled.img`
   width: 250px;
   padding: 5px;
   height: auto;
-  margin-bottom: 7rem;
+
 `;
 
 export const Triangle= styled.img`
@@ -74,7 +74,7 @@ export const PortfolioLink = styled.a`
  &:hover{
    background-color: #000814;
    transition: background-color 1s;
-   filter: brightness(0.85);
+   filter: brightness(0.6);
    transition: filter 1s;;
    transition-timing-function: ease-out;
  }

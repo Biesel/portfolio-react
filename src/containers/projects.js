@@ -9,7 +9,7 @@ export function ProjectsContainer(){
 
  return(
    <>
-    <Prj>
+    <Prj id="projects">
         <Prj.Triangle />
 
 	 <Prj.Title>Proyectos</Prj.Title>

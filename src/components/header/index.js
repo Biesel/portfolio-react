@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link as ReachRouterLink } from 'react-router-dom';
 import {
   Container,
   Link,
@@ -26,9 +25,7 @@ Header.Frame = function HeaderFrame({ children, ...restProps }) {
 
 Header.Logo = function HeaderLogo({ to, ...restProps }) {
   return (
-    <ReachRouterLink to={to}>
       <Logo {...restProps} />
-    </ReachRouterLink>
   );
 };
 
