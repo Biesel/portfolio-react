@@ -1,101 +1,61 @@
-import React, { useState } from 'react';
-import { Link as ReachRouterLink } from 'react-router-dom';
-import {
-  Container,
-  Group,
-  Background,
-  Dropdown,
-  Picture,
-  Link,
-  Search,
-  Profile,
-  FeatureCallOut,
-  SearchIcon,
-  SearchInput,
-  ButtonLink,
-  PlayButton,
-  Text,
-  Feature,
-  Logo,
-} from './styles/contact';
+import React from 'react';
+import { Container, Input, Break, Button, Text, Information,InnerContainer,InfoLogo, InfoContainer, InfoText,Form,LinksContainer,LinksLogo, InformationTextTitle } from './styles/contact';
 
-export default function Header({ bg = true, children, ...restProps }) {
-  return bg ? (
-    <Background data-testid="header-bg" {...restProps}>
-      {children}
-    </Background>
-  ) : (
-    children
-  );
+export default function Contact({ children, ...restProps }) {
+  return <Container {...restProps}>{children}</Container>;
 }
 
-Header.Frame = function HeaderFrame({ children, ...restProps }) {
-  return <Container {...restProps}>{children}</Container>;
+Contact.Input = function ContactInput({ ...restProps }) {
+  return <Input {...restProps} />;
 };
 
-Header.Group = function HeaderGroup({ children, ...restProps }) {
-  return <Group {...restProps}>{children}</Group>;
-};
-
-Header.Logo = function HeaderLogo({ to, ...restProps }) {
+Contact.Button = function ContactButton({ children, ...restProps }) {
   return (
-    <ReachRouterLink to={to}>
-      <Logo {...restProps} />
-    </ReachRouterLink>
+    <Button {...restProps}>
+      {children}
+    </Button>
   );
 };
 
-Header.Search = function HeaderSearch({ searchTerm, setSearchTerm, ...restProps }) {
-  const [searchActive, setSearchActive] = useState(false);
-
-  return (
-    <Search {...restProps}>
-      <SearchIcon onClick={() => setSearchActive((searchActive) => !searchActive)} data-testid="search-click">
-        <img src="/images/icons/search.png" alt="Search" />
-      </SearchIcon>
-      <SearchInput
-        value={searchTerm}
-        onChange={({ target }) => setSearchTerm(target.value)}
-        placeholder="Search films and series"
-        active={searchActive}
-        data-testid="search-input"
-      />
-    </Search>
-  );
-};
-
-Header.Profile = function HeaderProfile({ children, ...restProps }) {
-  return <Profile {...restProps}>{children}</Profile>;
-};
-
-Header.Feature = function HeaderFeature({ children, ...restProps }) {
-  return <Feature>{children}</Feature>;
-};
-
-Header.Picture = function HeaderPicture({ src, ...restProps }) {
-  return <Picture {...restProps} src={`/images/users/${src}.png`} />;
-};
-
-Header.Dropdown = function HeaderDropdown({ children, ...restProps }) {
-  return <Dropdown {...restProps}>{children}</Dropdown>;
-};
-
-Header.TextLink = function HeaderTextLink({ children, ...restProps }) {
-  return <Link {...restProps}>{children}</Link>;
-};
-
-Header.PlayButton = function HeaderPlayButton({ children, ...restProps }) {
-  return <PlayButton {...restProps}>{children}</PlayButton>;
-};
-
-Header.FeatureCallOut = function HeaderFeatureCallOut({ children, ...restProps }) {
-  return <FeatureCallOut {...restProps}>{children}</FeatureCallOut>;
-};
-
-Header.Text = function HeaderText({ children, ...restProps }) {
+Contact.Text = function ContactText({ children, ...restProps }) {
   return <Text {...restProps}>{children}</Text>;
 };
+Contact.InnerContainer =  function ContactInnerContainer({ children, ...restProps }) {
+  return <InnerContainer {...restProps}>{children}</InnerContainer>;
+}
+Contact.Form =  function ContactForm({ children, ...restProps }) {
+  return <Form {...restProps}>{children}</Form>;
+}
+Contact.Information =  function ContactInformation({ children, ...restProps }) {
+  return <Information {...restProps}>{children}</Information>;
+}
 
-Header.ButtonLink = function HeaderButtonLink({ children, ...restProps }) {
-  return <ButtonLink {...restProps}>{children}</ButtonLink>;
+
+Contact.InfoLogo = function ContactInfoLogo ({children , ...restprops}) {
+    return <InfoLogo {...restprops}/>
+};
+
+Contact.InfoContainer = function ContactInfoContainer ({children , ...restprops}) {
+    return <InfoContainer {...restprops}>
+        <InfoLogo {...restprops}/>{children}
+    </InfoContainer>
+
+};
+Contact.InfoText = function ContactInfoText ({children , ...restprops}) {
+    return <InfoText {...restprops}>{children}</InfoText>
+};
+
+Contact.LinksContainer = function ContactLinksContainer({ children, ...restProps }) {
+  return <LinksContainer {...restProps}>{children}</LinksContainer>;
+};
+
+Contact.InformationTextTitle = function ContactInformationTextTitle({ children, ...restProps }) {
+  return <InformationTextTitle {...restProps}>{children}</InformationTextTitle>;
+};
+
+Contact.LinksLogo = function ContactLogo({ children, ...restProps }) {
+  return <LinksLogo {...restProps}/>;
+};
+Contact.Break = function ContactBreak({ ...restProps }) {
+  return <Break {...restProps} />;
 };

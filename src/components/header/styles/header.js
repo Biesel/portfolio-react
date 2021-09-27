@@ -31,6 +31,7 @@ export const Link = styled.p`
   color: #fff;
   text-decoration: none;
   margin-right: 30px;
+  font-size:2rem;
   font-weight: ${({ active }) => (active === 'true' ? '700' : 'normal')};
   cursor: pointer;
 
@@ -107,9 +108,9 @@ export const ButtonLink = styled(ReachRouterLink)`
   height: fit-content;
   color: black;
   border: 0;
-  font-size: 16px;
+  font-size: 2rem;
   text-align:center;
-  border-radius: 100px;
+  border-radius: 9rem;
   padding: 8px 16px ;
   font-weight:bold;
   cursor: pointer;
@@ -207,7 +208,7 @@ export const FeatureCallOut = styled.h2`
 
 export const Text = styled.p`
   color: white;
-  font-size: 22px;
+  font-size: 2rem;
   line-height: normal;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
 `;

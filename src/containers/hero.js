@@ -6,17 +6,21 @@ import linkedin from '../assets/logos/linkedin-svgrepo-com.svg';
 import yt from '../assets/logos/youtube-svgrepo-com.svg';
 import developer_img from '../assets/images/silhoutte.png';
 
+const openTab = (props) => {
+  window.open(props, "_blank");
+};
+
 export function HeroContainer() {
   return (
     <>
     <Hero.Background>
     <Hero>
-      
+
     <Hero.Links>
-    <Hero.LinksLogo src={git} alt="git"/>
-    <Hero.LinksLogo src={instagram} alt="instagram"/>
-    <Hero.LinksLogo src={linkedin}alt="linkedin"/>
-    <Hero.LinksLogo src={yt} alt="yt"/>
+    <Hero.LinksLogo src={git} alt="git" onClick={() => openTab("https://www.google.com")}/>
+    <Hero.LinksLogo src={instagram} alt="instagram" onClick={() => openTab("https://www.google.com")}/>
+    <Hero.LinksLogo src={linkedin}alt="linkedin" onClick={() => openTab("https://www.google.com")}/>
+    <Hero.LinksLogo src={yt} alt="yt" onClick={() => openTab("https://www.google.com")}/>
     </Hero.Links>
 
     <Hero.DeveloperContainer>

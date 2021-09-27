@@ -4,9 +4,9 @@ import styled from 'styled-components/macro';
 export const Container = styled.div`
   display: grid;
   grid-template-columns:repeat(2,1fr);
-  padding: 20px;
+  padding: 1rem 0;
   // margin: auto;
-  max-width: 1000px;
+  max-width: 100rem;
 
   @media (max-width: 1000px) {
     padding: 70px 30px;
@@ -18,19 +18,17 @@ display: flex;
 flex-direction:column;
 margin-top: 170px;
 margin-left: 100px;
-// justify-content: space-between;
 align-content: space-between;
-padding-right:10%;
-  // border-bottom: 8px solid #222;
-  // padding: 50px 5%;
   color: white;
-  overflow: hidden;
 `;
 
 export const LinksLogo = styled.img`
-  max-width: 70px;
-  height: 70px;
+  width: 7rem;
+  height: 7rem;
   margin-bottom:10%;
+  &:hover {
+    cursor:pointer;
+  }
 `;
 
 export const DeveloperContainer = styled.div`
@@ -38,7 +36,7 @@ export const DeveloperContainer = styled.div`
   flex-direction:column;
   align-items:center;
   justify-content:center;
-  padding: 70px 0;
+  padding: 6rem 0;
   margin: auto;
   margin-bottom:20px;
   max-width: auto;
@@ -49,7 +47,7 @@ export const DeveloperContainer = styled.div`
   }
 `;
 export const Title = styled.h1`
-  font-size: 50px;
+  font-size: 5rem;
   letter-spacing:2px;
   line-height: 1.1;
   margin-bottom: 8px;

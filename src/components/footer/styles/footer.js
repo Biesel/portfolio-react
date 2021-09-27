@@ -18,6 +18,9 @@ export const UpLogo = styled.img`
   width: 4%;
   height:auto;
   margin-bottom:40px;
+  &:hover {
+    cursor:pointer;
+  }
 `;
 export const Link = styled.a`
   color: white;
